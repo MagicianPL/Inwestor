@@ -1,0 +1,767 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: spartan;
+}
+
+header {
+	width: 100%;
+	height: 55rem;
+	position: relative;
+}
+
+header > video {
+	object-fit: cover;
+    width: 100%;
+    height: 55rem;
+}
+
+header::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: black;
+	opacity: 0.6;
+}
+
+#title-circle {
+	width: 50rem;
+	height: 50rem;
+	background-color: rgba(255, 255, 255, 0.95);
+	z-index: 5;
+	position: absolute;
+	top: 2.5rem;
+	left: 0;
+	right: 0;
+	clip-path: circle(50% at 50% 50%);
+	margin: 0 auto;
+	color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Open Sans Condensed', sans-serif;
+	opacity: 0;
+	animation: fadeIn 4s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0; }
+	50% { opacity: 0.3; }
+	100% { opacity: 0.5; }
+}
+
+#title-circle > h1 {
+	font-size: 9rem;
+	margin-top: 6rem;
+}
+
+#title-circle > p {
+	font-size: 4.9rem;
+	margin: 2rem 0 1.5rem 0;
+}
+
+#title-circle > img {
+	width: 20%;
+}
+
+nav > ul {
+	list-style: none;
+	display: flex;
+	width: 100rem;
+	height: 7rem;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	justify-content: space-around;
+	position: absolute;
+	top: 54rem;
+	font-family: 'Open Sans Condensed', sans-serif;
+	letter-spacing: 2px;
+	word-spacing: 2px;
+}
+
+li {
+	display: block;
+	height: 100%;
+    width: 26rem;
+    box-sizing: border-box;
+    display: flex;
+    background-color: rgb(36,0,12);
+    background: linear-gradient(90deg, rgba(36,0,12,1) 0%, rgba(255,0,26,0.9780287114845938) 100%, rgba(0,212,255,1) 100%);
+    clip-path: polygon(17% 0, 100% 0, 80% 100%, 0% 100%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 2rem;
+    z-index: 5;
+	opacity: 0;
+}
+
+li:hover {
+	background: white;
+	color: black;
+	cursor: pointer;
+	font-weight: bold;
+	transition-duration: 0.5s;
+}
+
+@keyframes appear {
+	0% { opacity: 0; }
+	50% { opacity: 0.5; }
+	100% {opacity: 1; }
+}
+
+li:nth-child(1) {
+	animation: appear 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 2.5s;
+}
+
+li:nth-child(2) {
+	animation: appear 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 3.5s;
+}
+
+li:nth-child(3) {
+	animation: appear 2s;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+}
+
+#under-ul {
+	display: flex;
+	width: 100rem;
+	height: 7rem;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	justify-content: space-around;
+	position: absolute;
+	top: 54rem;
+}
+
+#under-ul > div {
+	height: 100%;
+	width: 26rem;
+	display: flex;
+	background-color: black;
+	clip-path: polygon(17% 0, 100% 0, 80% 100%, 0% 100%);
+	z-index: -1;
+	position: relative;
+	left: 2px;
+	top: 3px;
+	opacity: 0;
+	animation: fadeIn 3s;
+	animation-fill-mode: forwards;
+	animation-delay: 1.5s;
+}
+
+main {
+	padding-top: 15rem;
+}
+
+#page-one {
+	padding-top: 10rem;
+	margin-bottom: 5rem;
+}
+
+#about {
+	width: 100rem;
+	border: 1px solid gold;
+	position: relative;
+	margin: 0 auto;
+	font-size: 2.2rem;
+	padding: 5rem 0 5rem 0;
+	display: flex;
+	font-family: spartan;
+}
+
+#about > h2 {
+	font-size: 5rem;
+	width: 37rem;
+	height: 6rem;
+	background-color: white;
+	margin: 0 auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	top: -3rem;
+	font-weight: bold;
+	color: gold;
+	letter-spacing: 2px;
+}
+
+#desc {
+	height: 100%;
+	width: 60%;
+	padding-left: 5rem;
+	box-sizing: border-box;
+}
+
+#desc > p {
+	line-height: 3.5rem;
+}
+
+#desc > p:nth-child(2) {
+	margin: 2rem 0 2rem 0;
+}
+
+#photo {
+	width: 40%;
+	text-align: center;
+	position: relative;
+}
+
+#photo > img {
+	width: 28rem;
+}
+
+#photo > #shadow {
+	width: 28rem;
+	height: 20rem;
+	background-color: black;
+	clip-path: ellipse(3% 51% at 49% 51%);
+	transform: rotate(90deg);
+	position: absolute;
+	margin: 0 auto;
+	left: 0;
+	right: 0;
+	top: 19.5rem;
+	opacity: 0.3;
+}
+
+#page-two {
+	width: 100%;
+	padding-top: 10rem;
+	position: relative;
+}
+
+h3 {
+	font-size: 6.5rem;
+    margin-bottom: 7rem;
+	padding-left: 10%;
+	text-shadow: 1px 1px 5px #000000;
+}
+
+.divider {
+	width: 7%;
+	height: 1px;
+	border-top: 2px solid red;
+	display: block;
+}
+
+.divider:nth-child(1) {
+	position: absolute;
+	top: 13.5rem;
+	left: 1.5rem;
+}
+
+.divider:nth-child(3) {
+	width: 51%;
+	position: absolute;
+	top: 13.5rem;
+	right: 1.5rem;
+}
+
+#page-two > h4 {
+	width: 100%;
+	height: 6rem;
+	font-size: 3rem;
+	line-height: 6rem;
+    text-align: center;
+    background-color: #8F9699;
+    position: relative;
+	margin: 3.5rem 0 3.5rem 0;
+}
+
+#page-two > h4:hover::before {
+    content: "";
+    background-image: url(img/money.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.2;
+}
+
+.flex-container {
+	display: flex;
+	box-sizing: border-box;
+	padding: 0 5% 0 5%;
+	justify-content: center;
+}
+
+#text {
+	width: 75%;
+	line-height: 3rem;
+	text-align: center;
+}
+
+#crypto-images {
+	width: 15%;
+	padding-top: 4rem;
+}
+
+#text > p {
+	margin: 2.3rem 0 2.3rem 0;
+	font-size: 2rem;
+}
+
+#crypto-images > img {
+	height: 100px;
+    display: block;
+    margin: 0 auto;
+}
+
+#crypto-images > img:hover {
+	opacity: 0.8;
+}
+
+#page-three {
+	width: 100%;
+	padding-top: 10rem;
+	position: relative;
+}
+
+#page-three > h3 {
+	text-align: right;
+	padding: 0 10% 0 0;
+	margin-bottom: 3rem;
+}
+
+#page-three > .divider:nth-child(3) {
+	position: absolute;
+	top: 13.5rem;
+	right: 1.5rem;
+	width: 7%;
+}
+
+#page-three > .divider:nth-child(1) {
+	width: 52%;
+	position: absolute;
+	top: 13.5rem;
+	left: 1.5rem;
+}
+
+#page-three > h4 {
+	font-size: 3.5rem;
+	text-align: right;
+	padding-right: 10%;
+	margin-bottom: 8rem;
+}
+
+#page-three > p {
+	font-size: 2.2rem;
+	text-align: center;
+	margin-top: 2rem;
+}
+
+#box {
+	display: flex;
+	justify-content: center;
+	gap: 3rem;
+	border: 1px dashed red;
+	width: 80%;
+	margin: 3.5rem auto 3.5rem auto;
+	position: relative;
+}
+
+#box::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-image: url("img/bitcoinbg.jpg");
+	background-size: cover;
+	opacity: 0.4;
+}
+
+input {
+	margin: 8rem 0 8rem 0;
+	width: 20%;
+	height: 5rem;
+	border: 1px solid red;
+	z-index: 2;
+}
+
+input:focus {
+	outline: none;
+}
+
+#pole {
+	padding-left: 1.5rem;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+a > #ask {
+	background-color: rgb(131,58,180);
+	background: linear-gradient(45deg, rgba(131,58,180,1) 0%, rgba(210,0,0,1) 0%, rgba(227,90,80,1) 61%, rgba(254,236,211,1) 100%, rgba(253,204,136,1) 100%, rgba(252,176,69,1) 100%);
+	cursor: pointer;
+	width: 100%;
+}
+
+#box > a {
+	width: 20%;
+	z-index: 5;
+}
+
+#result {
+	width: 80%;
+	min-height: 40rem;
+	position: relative;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding: 5rem 3rem 5rem 3rem;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3.5rem;
+}
+
+#result > div:nth-child(1) {
+	width: 100%;
+	height: 4rem;
+	background-color: #cc0000;
+	position: absolute;
+	top: 0;
+	clip-path: polygon(100% 0, 0% 100%, 0 0);
+}
+
+#result > div:nth-child(2) {
+	width: 100%;
+	height: 4rem;
+	background-color: #cc0000;
+	position: absolute;
+	bottom: 0;
+	clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+
+#result > p {
+	font-size: 2.4rem;
+	font-weight: bold;
+	width: 95%;
+	text-align: center;
+	opacity: 0;
+	animation: appearing;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes appearing {
+	100% {
+		opacity: 1;
+	}
+}
+
+a, a:hover, a:visited, a:active {
+  color: inherit;
+  text-decoration: none;
+ }
+ 
+  @media (min-width: 320px) and (max-width: 480px) {
+	  html {
+		  font-size: 30%;
+	  }
+	  
+	  nav > ul {
+		  width: 100%;
+	  }
+	  
+	  li {
+		  width: 19rem;
+	  }
+	  
+	  #under-ul {
+		  width: 100%;
+	  }
+	  
+	  #under-ul > div {
+		  width: 19rem;
+	  }
+	  
+	  #about {
+		  width: 80%;
+		  flex-direction: column-reverse;
+		  align-items: center;
+	  }
+	  
+	  #desc {
+		  margin-top: 5rem;
+		  padding: 0;
+		  width: 90%;
+	  }
+	  
+	  #desc > p {
+		  text-align: center;
+		  margin: 0;
+	  }
+	  
+	  #photo {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+	  }
+	  
+	  #photo > img {
+		  width: 18rem;
+		  display: block;
+	  }
+	  
+	  #photo > #shadow {
+		  width: 18rem;
+		  top: 9.5rem;
+	  }
+	  
+	  .divider {
+		  display: none;
+	  }
+	  
+	  h3 {
+		  padding-left: 0;
+		  text-align: center;
+	  }
+	  
+	  #page-two > h4 {
+		  min-height: 6rem;
+		  font-size: 1.8rem;
+	  }
+	  
+	  #crypto-images > img {
+		  height: 11rem;
+		  margin-left: 2rem;
+	  }
+	  
+	  #page-three {
+		  padding-left: 3rem;
+		  padding-right: 3rem;
+		  box-sizing: border-box;
+	  }
+	  
+	  #page-three > h3 {
+		  text-align: center;
+		  padding: 0;
+	  }
+	  
+	  #box {
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		  min-height: 31rem;
+		  box-sizing: border-box;
+	  }
+	  
+	 #pole {
+		 width: 60%;
+		 height: 8rem;
+		 display: block;
+		 margin: 0;
+		 text-align: center;
+	 }
+	  
+	  input {
+	
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: 8rem;
+	  }
+	  
+	  #box > a {
+		  width: 60%;
+		  height: 50%;
+		  display: block;
+		  justify-content: center;
+		  align-items: center;
+		  box-sizing: border-box;
+		  margin: 0;
+	  }
+	  
+	  a > #ask {
+		  margin: 0;
+	  }
+  }
+  
+  @media (min-width: 481px) and (max-width: 768px) {
+	   html {
+		  font-size: 45%;
+	  }
+	  
+	  nav > ul {
+		  width: 100%;
+	  }
+	  
+	  li {
+		  width: 19rem;
+	  }
+	  
+	  #under-ul {
+		  width: 100%;
+	  }
+	  
+	  #under-ul > div {
+		  width: 19rem;
+	  }
+	  
+	  #about {
+		  width: 80%;
+		  flex-direction: column-reverse;
+		  align-items: center;
+	  }
+	  
+	  #desc {
+		  margin-top: 5rem;
+		  padding: 0;
+		  width: 90%;
+	  }
+	  
+	  #desc > p {
+		  text-align: center;
+		  margin: 0;
+	  }
+	  
+	  #photo {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+	  }
+	  
+	  #photo > img {
+		  width: 18rem;
+		  display: block;
+	  }
+	  
+	  #photo > #shadow {
+		  width: 18rem;
+		  top: 9.5rem;
+	  }
+	  
+	  .divider {
+		  display: none;
+	  }
+	  
+	  h3 {
+		  padding-left: 0;
+		  text-align: center;
+	  }
+	  
+	  #page-two > h4 {
+		  min-height: 6rem;
+		  font-size: 1.8rem;
+	  }
+	  
+	  #crypto-images > img {
+		  height: 11rem;
+		  margin-left: 2rem;
+	  }
+	  
+	  #page-three {
+		  padding-left: 3rem;
+		  padding-right: 3rem;
+		  box-sizing: border-box;
+	  }
+	  
+	  #page-three > h3 {
+		  text-align: center;
+		  padding: 0;
+	  }
+	  
+	  #box {
+		  flex-direction: column;
+		  justify-content: center;
+		  align-items: center;
+		  min-height: 31rem;
+		  box-sizing: border-box;
+	  }
+	  
+	 #pole {
+		 width: 60%;
+		 height: 8rem;
+		 display: block;
+		 margin: 0;
+		 text-align: center;
+	 }
+	  
+	  input {
+	
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  height: 8rem;
+	  }
+	  
+	  #box > a {
+		  width: 60%;
+		  height: 50%;
+		  display: block;
+		  justify-content: center;
+		  align-items: center;
+		  box-sizing: border-box;
+		  margin: 0;
+	  }
+	  
+	  a > #ask {
+		  margin: 0;
+	  }
+  }
+ 
+ @media (min-width: 769px) and (max-width: 1024px) {
+	 html {
+		 font-size: 45%;
+	 }
+	 
+	 h3 {
+		 font-size: 5.5rem;
+	 }
+	 
+	 #crypto-images {
+		 margin-left: 2rem;
+	 }
+	 
+	 #page-three {
+		 padding-left: 2rem;
+		 padding-right: 2rem;
+		 box-sizing: border-box;
+	 }
+ }
+ 
+ @media (min-width: 1025px) and (max-width: 1400px){
+	 h3 {
+		 font-size: 5rem;
+	 }
+ }
+ 
+  @media (min-width: 1500px) {
+	 html {
+		 font-size: 70%;
+	 }
+ }
+ 
+ @media (min-width: 1600px) {
+	 html {
+		 font-size: 75%;
+	 }
+ }
+ 
